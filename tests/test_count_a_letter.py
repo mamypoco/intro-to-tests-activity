@@ -17,3 +17,46 @@ def test_demo_two():
 
     assert result == 42
 # Delete the demo tests and add your tests here 
+
+def test_count_a_letter_in_sentence():
+#arrange
+    sentence = "Hello"
+    letter = "l"
+#act
+    result = count_a_letter(sentence, letter) 
+#assert
+    assert result == 2
+
+
+def test_count_a_letter_empty():
+#arrange
+    sentence = "world"
+    letter = ""
+#act
+    result = count_a_letter(sentence, letter) 
+#assert
+    assert result == None
+
+
+def test_count_a_letter_number():
+#arrange
+    sentence = "kindergarten"
+    letter = "3"
+#act
+    result = count_a_letter(sentence, letter) 
+#assert
+    assert result is None
+
+def test_count_a_letter_number_int():
+#arrange
+    sentence = "kindergarten"
+    letter = 3
+#act
+    result = count_a_letter(sentence, letter) 
+#assert
+    assert result == "Please enter letter, not integer"
+
+# Edge cases:
+# - if we have empty word, input from user
+# - if we have number instead of letter
+# - "p" in "Hello" -> None

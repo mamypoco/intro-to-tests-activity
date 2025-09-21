@@ -1,4 +1,7 @@
 def count_a_letter(sentence, letter):
+    if isinstance(letter, int):
+        return "Please enter letter, not integer"
+
     if not letter.isalpha():
         return None
     if not sentence:
@@ -10,3 +13,5 @@ def count_a_letter(sentence, letter):
             count +=1
     
     return count
+
+print(count_a_letter("world", 3))

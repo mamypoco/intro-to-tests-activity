@@ -1,0 +1,8 @@
+Nominal cases:
+- "Hello": ll -> 2, H -> 1
+- assert count_a_letter("hello", "l") == 2
+
+Edge cases:
+- if we have empty word, input from user
+- if we have number instead of letter
+- "p" in "Hello" -> None
